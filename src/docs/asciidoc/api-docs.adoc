@@ -1,0 +1,51 @@
+= RSupport 과제 테스트 Spring REST Docs JUnit 5
+Jung Taekgeun;
+:doctype: book
+:icons: font
+:source-highlighter: highlightjs
+
+RSupport 과제를 위한 REST API 입니다.
+
+아래는 cURL을 사용하여 REST API를 호출 예시입니다.
+
+초기 화면
+include::{snippets}/index-controller-test/announcement_index/curl-request.adoc[]
+include::{snippets}/index-controller-test/announcement_index/http-request.adoc[]
+include::{snippets}/index-controller-test/announcement_index/http-response.adoc[]
+
+공지사항 목록 페이지
+include::{snippets}/index-controller-test/announcement_list/curl-request.adoc[]
+include::{snippets}/index-controller-test/announcement_list/http-request.adoc[]
+include::{snippets}/index-controller-test/announcement_list/http-response.adoc[]
+
+공지사항 등록 페이지
+include::{snippets}/index-controller-test/announcement_register/curl-request.adoc[]
+include::{snippets}/index-controller-test/announcement_register/http-request.adoc[]
+include::{snippets}/index-controller-test/announcement_register/http-response.adoc[]
+
+ID가 4 인 공지사항 보기 페이지
+include::{snippets}/index-controller-test/announcement_view/curl-request.adoc[]
+include::{snippets}/index-controller-test/announcement_view/http-request.adoc[]
+include::{snippets}/index-controller-test/announcement_view/http-response.adoc[]
+
+ID가 5 인 공지사항 수정 페이지
+include::{snippets}/index-controller-test/announcement_update/curl-request.adoc[]
+include::{snippets}/index-controller-test/announcement_update/http-request.adoc[]
+include::{snippets}/index-controller-test/announcement_update/http-response.adoc[]
+
+공지사항 등록 URL
+include::{snippets}/announcement-controller-test/announcement_save/curl-request.adoc[]
+include::{snippets}/announcement-controller-test/announcement_save/http-request.adoc[]
+include::{snippets}/announcement-controller-test/announcement_save/http-response.adoc[]
+
+공지사항 수정 URL
+include::{snippets}/announcement-controller-test/announcement_update/curl-request.adoc[]
+include::{snippets}/announcement-controller-test/announcement_update/http-request.adoc[]
+include::{snippets}/announcement-controller-test/announcement_update/http-response.adoc[]
+
+공지사항 삭제 URL
+include::{snippets}/announcement-controller-test/announcement_delete/curl-request.adoc[]
+include::{snippets}/announcement-controller-test/announcement_delete/http-request.adoc[]
+include::{snippets}/announcement-controller-test/announcement_delete/http-response.adoc[]
+
+위 문서는 Andy Wilkinson 님의 문서를 참조하여 작성하였습니다.

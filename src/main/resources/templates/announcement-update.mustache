@@ -1,0 +1,41 @@
+{{>layout/header}}
+
+<h1>공지사항 수정</h1>
+
+<input type="hidden" id="currentPage" value="{{pageRequestDto.currentPage}}">
+
+<div class="col-md-12">
+    <div class="col-md-4">
+        <form>
+            <div class="form-group">
+                <label for="title">글 번호</label>
+                <input type="text" class="form-control" id="id" value="{{announcement.id}}" readonly>
+            </div>
+            <div class="form-group">
+                <label for="title">제목</label>
+                <input type="text" class="form-control" id="title" value="{{announcement.title}}">
+            </div>
+            <div class="form-group">
+                <label for="writer">작성자</label>
+                <input type="text" class="form-control" id="writer" value="{{announcement.writer}}" readonly>
+            </div>
+            <div class="form-group">
+                <label for="createdDate">최초 작성일</label>
+                <input type="text" class="form-control" id="createdDate" value="{{announcement.createdDate}}" readonly>
+            </div>
+            <div class="form-group">
+                <label for="modifiedDate">최종 수정일</label>
+                <input type="text" class="form-control" id="modifiedDate" value="{{announcement.modifiedDate}}" readonly>
+            </div>
+            <div class="form-group">
+                <label for="content">내용</label>
+                <input type="text" class="form-control" id="content" value="{{announcement.content}}">
+            </div>
+        </form>
+        <button type="button" class="btn btn-primary" id="btn-update">수정</button>
+        <button type="button" class="btn btn-danger" id="btn-delete">삭제</button>
+        <a href="/announcement/view/{{announcement.id}}?currentPage={{pageRequestDto.currentPage}}" role="button" class="btn btn-secondary">취소</a>
+    </div>
+</div>
+
+{{>layout/footer}}

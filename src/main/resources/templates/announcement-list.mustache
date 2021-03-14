@@ -1,0 +1,52 @@
+{{>layout/header}}
+
+    <input type="hidden" id="currentPage" value="{{pageRequestDto.currentPage}}">
+
+    <h1>공지사항</h1>
+
+    <div class="col-md-12">
+        <!-- 로그인 기능 영역 -->
+        <div class="row">
+            <div class="col-md-6">
+                <a href="/announcement/register?currentPage={{pageRequestDto.currentPage}}" role="button" class="btn btn-primary">글 등록</a>
+            </div>
+        </div>
+        <br>
+        <!-- 목록 출력 영역 -->
+        <table class="table table-horizontal table-bordered">
+            <thead class="thead-strong">
+            <tr>
+                <th>게시글  번호</th>
+                <th>제목</th>
+                <th>작성자</th>
+                <th>최초 작성일</th>
+                <th>최종 수정일</th>
+            </tr>
+            </thead>
+            <tbody id="tbody">
+            {{#announcements.dtoList}}
+            <tr>
+                <td>{{id}}</td> <!-- List에서 뽑아낸 객체의 필드 사용 -->
+                <td><a href="/announcement/view/{{id}}?currentPage={{pageRequestDto.currentPage}}">{{title}}</a></td>
+                <td>{{writer}}</td>
+                <td>{{createdDate}}</td>
+                <td>{{modifiedDate}}</td>
+            </tr>
+            {{/announcements.dtoList}}
+            </tbody>
+        </table>
+
+        <ul class="pagination justify-content-center">
+            {{#announcements.previous}}
+                <li class="page-item"><a class="page-link" href="/announcement/list?currentPage={{announcements.previousPage}}">이전</a></li>
+            {{/announcements.previous}}
+            {{#announcements.pageList}}
+                <li class="page-item" name="{{{.}}}" value="{{{.}}}"><a class="page-link" href="/announcement/list?currentPage={{{.}}}">{{{.}}}</a></li>
+            {{/announcements.pageList}}
+            {{#announcements.next}}
+                <li class="page-item"><a class="page-link" href="/announcement/list?currentPage={{announcements.nextPage}}">다음</a></li>
+            {{/announcements.next}}
+        </ul>
+    </div>
+
+{{>layout/footer}}
