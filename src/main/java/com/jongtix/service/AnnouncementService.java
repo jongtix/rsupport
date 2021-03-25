@@ -29,7 +29,7 @@ public class AnnouncementService {
         Pageable pageable = pageRequestDto.getPageable(Sort.by("id").descending());
         Page<Announcement> result = announcementRepository.findAll(pageable);
 
-        Function<Announcement, AnnouncementResponseDto> function = (entity -> new AnnouncementResponseDto(entity));
+        Function<Announcement, AnnouncementResponseDto> function = (AnnouncementResponseDto::new);
 
         return new PageResponseDto<>(result, function);
     }

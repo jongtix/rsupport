@@ -66,7 +66,7 @@ class AnnouncementControllerTest {
     @Test
     void announcement_save() throws Exception {
         //given
-        String title = "title";
+        String title = "제목";
         String content = "content";
         String writer = "writer";
 

@@ -1,16 +1,13 @@
 package com.jongtix.dto.response;
 
 import com.jongtix.domain.announcement.Announcement;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.time.LocalDateTime;
 
 @Builder
 @Getter
-@NoArgsConstructor
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
 public class AnnouncementResponseDto {
 
